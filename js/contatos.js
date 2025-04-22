@@ -1,10 +1,23 @@
 'use strict'
 
-async function getContatos(){
+export async function getContatos(){
     
     const url = 'https://bakcend-fecaf-render.onrender.com/contatos'
 
     //Pede para o fetch fazer uma requisição na url
+    const response = await fetch(url)
+
+    const data = await response.json()
+
+    console.log(data)
+
+    return data
+}
+
+export async function contatosPorNome(nome){
+    
+    const url = `https://bakcend-fecaf-render.onrender.com/contatos?nome_like=^${nome}`
+
     const response = await fetch(url)
 
     const data = await response.json()
