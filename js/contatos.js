@@ -27,7 +27,7 @@ export async function contatosPorNome(nome){
     return data
 }
 
-async function postContatos(contato){
+export async function postContatos(contato){
 
     const url = 'https://bakcend-fecaf-render.onrender.com/contatos'
 
@@ -45,7 +45,7 @@ async function postContatos(contato){
     return response.ok
 }
 
-async function putContato(contato, id){
+export async function putContato(contato, id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
 
 
@@ -62,7 +62,7 @@ async function putContato(contato, id){
     return response.ok
 }
 
-async function deleteContato(id){
+export async function deleteContato(id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
 
     const options = {
